@@ -1,0 +1,33 @@
+{
+	"nodes":[
+		{"id":"group-concepts","type":"group","x":-1700,"y":280,"width":760,"height":900,"color":"4","label":"🧠 مفاهیم پایه و پیشرفته"},
+		{"id":"group-bugs","type":"group","x":260,"y":280,"width":700,"height":420,"color":"1","label":"🐞 اشکالات و درس‌های میدانی"},
+		{"id":"title","type":"text","text":"# 🤖 پروژه چت‌بات فارامرز\n### نقشه کامل یک پروژه از صفر تا تکمیل","x":-560,"y":-950,"width":1120,"height":140},
+		{"id":"goal","type":"text","text":"🎯 **هدف پروژه**\n\nساخت یک چت‌بات خط‌فرمانی با شخصیت ثابت (فرامرز)، حافظه واقعی گفتگو، کنترل دقیق توکن و هزینه، پاسخ زنده (استریم)، و مدیریت هوشمند طول تاریخچه.","x":-560,"y":-770,"width":1120,"height":140},
+		{"id":"v1","type":"text","text":"**نسخه ۱**\n🔌 اتصال پایه به OpenRouter\nشخصیت ثابت + پیام سیستمی","x":-1400,"y":-560,"width":300,"height":150,"color":"6"},
+		{"id":"v2","type":"text","text":"**نسخه ۲**\n🏗️ تبدیل به کلاس\nشمارش توکن و هزینه","x":-1000,"y":-560,"width":300,"height":150,"color":"6"},
+		{"id":"v3","type":"text","text":"**نسخه ۳**\n⚡ استریم واقعی\nتوکنایزر دقیق مدل","x":-600,"y":-560,"width":300,"height":150,"color":"6"},
+		{"id":"hub","type":"file","file":"AI Engineering/chat bot/chat bot whole developing journy.md","x":-460,"y":-320,"width":620,"height":380,"color":"5"},
+		{"id":"vfinal","type":"text","text":"**نسخه نهایی** 🏁\nپنجره لغزان + خلاصه‌سازی\nمدیریت هوشمند حافظه","x":-200,"y":-560,"width":300,"height":150,"color":"2"},
+		{"id":"bugs","type":"file","file":"AI Engineering/chat bot/chat bot bugs.md","x":310,"y":330,"width":600,"height":320},
+		{"id":"final-status","type":"text","text":"🏁 **وضعیت: پروژه تکمیل شد**\n\nاز یک اسکریپت تک‌فایلی ساده، به یک سیستم کامل با معماری شیءگرا، مدیریت هزینه، و حافظه هوشمند رسیدیم. 🚀","x":-460,"y":1300,"width":620,"height":140,"color":"4"},
+		{"id":"memory-management","type":"file","file":"AI Engineering/chat bot/Chat bot memory management (sliding window and summarization).md","x":-1650,"y":920,"width":660,"height":240},
+		{"id":"token-pipeline","type":"file","file":"AI Engineering/chat bot/Chat bot token pipeline and performance metrics.md","x":-1650,"y":640,"width":660,"height":220},
+		{"id":"theory","type":"file","file":"AI Engineering/chat bot/chat bot theory.md","x":-1650,"y":320,"width":660,"height":250}
+	],
+	"edges":[
+		{"id":"e-title-goal","fromNode":"title","fromSide":"bottom","toNode":"goal","toSide":"top"},
+		{"id":"e-goal-v1","fromNode":"goal","fromSide":"bottom","toNode":"v1","toSide":"top"},
+		{"id":"e-v1-v2","fromNode":"v1","fromSide":"right","toNode":"v2","toSide":"left"},
+		{"id":"e-v2-v3","fromNode":"v2","fromSide":"right","toNode":"v3","toSide":"left"},
+		{"id":"e-v3-vfinal","fromNode":"v3","fromSide":"right","toNode":"vfinal","toSide":"left"},
+		{"id":"e-vfinal-hub","fromNode":"vfinal","fromSide":"bottom","toNode":"hub","toSide":"top"},
+		{"id":"e-hub-theory","fromNode":"hub","fromSide":"left","toNode":"theory","toSide":"right","label":"مفاهیم پایه"},
+		{"id":"e-theory-token","fromNode":"theory","fromSide":"bottom","toNode":"token-pipeline","toSide":"top","label":"عمیق‌تر شدن مفهوم توکن"},
+		{"id":"e-token-memory","fromNode":"token-pipeline","fromSide":"bottom","toNode":"memory-management","toSide":"top","label":"قدم بعدی: مدیریت context"},
+		{"id":"e-hub-bugs","fromNode":"hub","fromSide":"right","toNode":"bugs","toSide":"left","label":"درس‌های میدانی"},
+		{"id":"e-token-bugs","fromNode":"token-pipeline","fromSide":"right","toNode":"bugs","toSide":"left","label":"باگ ۹"},
+		{"id":"e-memory-bugs","fromNode":"memory-management","fromSide":"right","toNode":"bugs","toSide":"left","label":"باگ ۱۰"},
+		{"id":"e-hub-final","fromNode":"hub","fromSide":"bottom","toNode":"final-status","toSide":"top"}
+	]
+}
